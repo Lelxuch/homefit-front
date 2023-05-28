@@ -1,0 +1,9 @@
+<div
+    [ngClass]="{
+        'fullscreen': type === 'fullscreen',
+        'local' : type === 'local',
+        'blackout' : blackout
+    }"
+>
+    <nz-spin nzSimple [nzSize]="size"></nz-spin>
+</div>

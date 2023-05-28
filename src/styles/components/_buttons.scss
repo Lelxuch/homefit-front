@@ -1,0 +1,49 @@
+@import '../base/variables';
+
+button {
+  cursor: pointer;
+}
+
+.btn {
+  border-radius: $border-radius-1;
+  border: 3px solid;
+  padding: 0.75rem 1.5rem;
+}
+
+/* Button transparent */
+.btn-transparent {
+  background: transparent;
+  border-color: #fff;
+  color: #fff;
+
+  &:hover {
+    background: #fff;
+    color: #000;
+  }
+}
+
+/* Button sizing */
+.btn-size-1 {
+  font-size: 3.052rem;
+  padding: 0.75rem 1.5rem;
+}
+
+.btn-size-2 {
+  font-size: 2.441rem;
+  padding: 0.75rem 1.5rem;
+}
+
+.btn-size-3 {
+  font-size: 1.953rem;
+  padding: 0.75rem 1.5rem;
+}
+
+.btn-size-4 {
+  font-size: 1.563rem;
+  padding: 0.75rem 1.5rem;
+}
+
+.btn-size-5 {
+  font-size: 1.25rem;
+  padding: 0.6rem 1.4rem;
+}

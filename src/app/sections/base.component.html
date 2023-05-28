@@ -1,0 +1,24 @@
+<nz-layout class="layout-outer">
+
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <div routerLink="/" class="logo">
+                    HomeFit
+                </div>
+                <nav>
+                    <a routerLink="activity" class="nav-link">Activity</a>
+                    <a routerLink="history" class="nav-link">History</a>
+                    <a href="" class="nav-link">Log out</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="container layout-outer base-content">
+        <router-outlet></router-outlet>
+    </div>
+
+    <nz-footer></nz-footer>
+
+</nz-layout>

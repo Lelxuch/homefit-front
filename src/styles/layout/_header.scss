@@ -1,0 +1,47 @@
+@import "src/styles/base/variables";
+
+/* Header */
+.header {
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  padding: 1rem 0;
+  background: #000;
+
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+      font-size: 1.563rem;
+      margin: 0;
+      color: #fff;
+      cursor: pointer !important;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-link {
+      margin: 0 2rem;
+      text-transform: uppercase;
+      color: $text;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $app-primary;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.header-transparent {
+  background: rgba($color: $background, $alpha: 0.5);
+}
