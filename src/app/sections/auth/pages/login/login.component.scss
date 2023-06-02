@@ -1,14 +1,11 @@
 @import '../../../../../styles/base/variables';
 
 .login-outer {
-  height: 100vh;
-}
-
-.inner-content {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
+  margin-top: 150px;
 }
 
 .login-form {

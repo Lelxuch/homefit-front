@@ -9,10 +9,10 @@ const routes: Routes = [
   {path: '', loadChildren: () => import('./sections/landing/landing.module').then(m => m.LandingModule)},
   {path: '', component: BaseComponent,
     children: [
+      {path: '', loadChildren: () => import('./sections/auth/auth.module').then(m => m.AuthModule)},
       {path: 'history', loadChildren: () => import('./sections/history/history.module').then(m => m.HistoryModule)},
     ],
   },
-  {path: '', loadChildren: () => import('./sections/auth/auth.module').then(m => m.AuthModule)},
   {path: '**', component: NotFoundPageComponent}
 ];
 

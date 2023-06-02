@@ -17,6 +17,7 @@ export class ApiInterceptor implements HttpInterceptor {
   ) {}
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+
     request = request.clone({
       url: environment.apiUrl + request.url
     })
@@ -29,12 +30,14 @@ export class ApiInterceptor implements HttpInterceptor {
       });
     }
 
+    console.log(environment.apiUrl);
+
     return next.handle(request).pipe(
       catchError((error: HttpErrorResponse) => {
-        if (error.status === 401) {
-          this.authService.logout();
-          this.message.create('error', 'Вам необходимо авторизоваться')
-        }
+        // if (error.status === 401) {
+        //   this.authService.logout();
+        //   this.message.create('error', 'Вам необходимо авторизоваться')
+        // }
         return throwError(error);
       })
     );

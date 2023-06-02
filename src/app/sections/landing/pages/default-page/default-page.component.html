@@ -1,6 +1,6 @@
-<nz-layout class="layout-outer">
+<nz-layout>
 
-    <header class="header header-transparent">
+    <header class="header header-absolute header-transparent">
         <div class="container">
             <div class="header-inner">
                 <div routerLink="/" class="logo">
@@ -9,7 +9,8 @@
                 <nav>
                     <a routerLink="activity" class="nav-link">Activity</a>
                     <a routerLink="history" class="nav-link">History</a>
-                    <a href="" class="nav-link">Log out</a>
+                    <a routerLink="signin" class="nav-link">Sign in</a>
+                    <a class="nav-link">Log out</a>
                 </nav>
             </div>
         </div>
@@ -24,7 +25,7 @@
                         <h1 nz-typography>Workout anywhere</h1>
                         <p>Personalized Feedback and Insights for Next-Level Training. Maximize your potential with our advanced ML technology, user-friendly interface, and tailored analysis. Elevate your workouts and achieve your fitness goals like never before.</p>
                     </div>
-                    <button class="btn btn-transparent btn-size-5">Sign up</button>
+                    <button routerLink="signup" class="btn btn-transparent btn-size-5">Sign up</button>
                 </div>
             </div>
             <div class="block-pagination-row">

@@ -1,6 +1,10 @@
 @import "src/styles/layout/default-sections";
 @import "src/styles/layout/header";
 
-.base-content {
-  padding-top: 12vh;
+.content {
+  height: 100%;
+}
+
+nz-footer {
+  text-align: center;
 }

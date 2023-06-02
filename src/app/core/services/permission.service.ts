@@ -18,9 +18,9 @@ export class PermissionService {
 
   get defaultSection(): string {
     if (this.isAdmin) {
-      return 'admin';
+      return '/admin';
     }
-    return 'applications/list';
+    return '/history';
   }
 
 }

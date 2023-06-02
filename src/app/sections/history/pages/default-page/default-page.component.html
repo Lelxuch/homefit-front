@@ -1,18 +1,22 @@
-<div class="history-title">
-    <h1 nz-typography>History</h1>
+<div class="default-content">
+
+    <div class="history-title">
+        <h1 nz-typography>History</h1>
+    </div>
+
+    <nz-divider></nz-divider>
+
+    <div class="history-list" *ngIf="!loading">
+
+        <ng-container>
+            <app-history-card
+                    *ngFor="let item of historyData"
+                    [data]="item"
+            ></app-history-card>
+        </ng-container>
+
+    </div>
+
+    <app-loading *ngIf="loading" [type]="'fullscreen'"></app-loading>
+
 </div>
-
-<nz-divider></nz-divider>
-
-<div class="history-list" *ngIf="!loading">
-
-    <ng-container>
-        <app-history-card
-                *ngFor="let item of historyData"
-                [data]="item"
-        ></app-history-card>
-    </ng-container>
-
-</div>
-
-<app-loading *ngIf="loading" [type]="'fullscreen'"></app-loading>

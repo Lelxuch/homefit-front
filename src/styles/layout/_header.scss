@@ -2,7 +2,6 @@
 
 /* Header */
 .header {
-  position: absolute;
   width: 100%;
   z-index: 10;
   padding: 1rem 0;
@@ -40,6 +39,10 @@
       }
     }
   }
+}
+
+.header-absolute {
+  position: absolute;
 }
 
 .header-transparent {
