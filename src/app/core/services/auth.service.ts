@@ -29,14 +29,7 @@ export class AuthService {
   }
 
   signup(user: any) {
-    const data = {
-      "email":"s@gmail.com",
-      "password":"123",
-      "fullName":"Sanzhar",
-      "gender":"Male",
-      "age":19
-    }
-    return this.http.post(`/api/accounts`, data);
+    return this.http.post(`/api/accounts`, user);
   }
 
   login(user: any) {

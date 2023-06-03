@@ -12,14 +12,7 @@ export class PermissionService {
     private authService: AuthService
   ) { }
 
-  get isAdmin(): boolean {
-    return this.authService?.currentUser?.role === UserRole.ADMIN;
-  }
-
   get defaultSection(): string {
-    if (this.isAdmin) {
-      return '/admin';
-    }
     return '/history';
   }
 

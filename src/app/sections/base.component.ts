@@ -12,7 +12,6 @@ export class BaseComponent implements OnInit {
 
   constructor(
     private authService: AuthService,
-    private permissionService: PermissionService
   ) { }
 
   ngOnInit(): void {
@@ -20,10 +19,6 @@ export class BaseComponent implements OnInit {
 
   logout(): void {
     this.authService.logout();
-  }
-
-  isAdmin(): boolean {
-    return this.permissionService.isAdmin;
   }
 
 }

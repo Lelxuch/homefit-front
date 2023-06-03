@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {AuthService} from "../../../../core/services/auth.service";
 
 @Component({
   selector: 'app-default-page',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class DefaultPageComponent {
 
+  constructor(
+    private authService: AuthService,
+  ) { }
+
+  logout(): void {
+    this.authService.logout();
+  }
 }
