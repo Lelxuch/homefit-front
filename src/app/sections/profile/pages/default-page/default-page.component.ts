@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {HistoryService} from "../../../../core/services/history.service";
+import {ProfileService} from "../../../../core/services/profile.service";
 import {NzMessageService} from "ng-zorro-antd/message";
-import {IHistory} from "../../../../core/model/history";
+import {IProfile} from "../../../../core/model/profile";
 
 @Component({
   selector: 'app-default-page',
@@ -10,22 +10,23 @@ import {IHistory} from "../../../../core/model/history";
 })
 export class DefaultPageComponent implements OnInit{
 
-  historyData: IHistory[];
-
   loading: boolean = false;
 
+  profileData: IProfile;
+
   constructor(
-    private historyService: HistoryService,
+    private profileService: ProfileService,
     private message: NzMessageService
   ) { }
 
   ngOnInit() {
-    this.historyService.getHistoryList()
-      .subscribe(res => {
-        this.historyData = res;
+    this.loading = true;
+    this.profileService.getProfile()
+      .subscribe((res: IProfile) => {
+        this.profileData = res;
         this.loading = false;
       }, err => {
-        this.message.error(err.error.message || 'Внутренняя ошибка сервера');
+        this.message.error('Внутренняя ошибка сервера');
         this.loading = false;
       })
   }

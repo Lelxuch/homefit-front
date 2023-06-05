@@ -1,15 +1,14 @@
 @import "/src/styles/base/variables";
 @import "/src/styles/layout/default-sections";
+@import "/src/styles/components/block";
 
 .video-block {
   video {
     width: 100%;
+    max-height: 70vh;
+    background: #000;
+    border-radius: $border-radius-1;
   }
-}
-
-.block {
-  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
-  border-radius: $border-radius-1;
 }
 
 .history-results {

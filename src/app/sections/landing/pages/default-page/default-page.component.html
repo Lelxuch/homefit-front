@@ -1,20 +1,6 @@
 <nz-layout>
 
-    <header class="header header-absolute header-transparent">
-        <div class="container">
-            <div class="header-inner">
-                <div routerLink="/" class="logo">
-                    HomeFit
-                </div>
-                <nav>
-                    <a routerLink="activity" class="nav-link">Activity</a>
-                    <a routerLink="history" class="nav-link">History</a>
-                    <a routerLink="signin" class="nav-link">Sign in</a>
-                    <a (click)="logout()" class="nav-link">Log out</a>
-                </nav>
-            </div>
-        </div>
-    </header>
+    <app-header [isTransparent]="true" [isAbsolute]="true"></app-header>
 
     <section class="intro">
         <div class="container">

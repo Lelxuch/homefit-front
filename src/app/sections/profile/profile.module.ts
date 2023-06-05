@@ -2,11 +2,14 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from "@angular/router";
 
-import {NzTypographyModule} from "ng-zorro-antd/typography";
-import {NzLayoutModule} from "ng-zorro-antd/layout";
+import {NzGridModule} from 'ng-zorro-antd/grid';
 
 import {DefaultPageComponent} from './pages/default-page/default-page.component';
+import {NzTypographyModule} from "ng-zorro-antd/typography";
+import {NzDividerModule} from "ng-zorro-antd/divider";
 import {SharedModule} from "../../shared/shared.module";
+import {NzStatisticModule} from "ng-zorro-antd/statistic";
+import {NzIconModule} from "ng-zorro-antd/icon";
 
 const routes: Routes = [
   {path: '', component: DefaultPageComponent}
@@ -14,14 +17,17 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    DefaultPageComponent
+    DefaultPageComponent,
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
+    NzGridModule,
     NzTypographyModule,
-    NzLayoutModule,
-    SharedModule
+    NzDividerModule,
+    SharedModule,
+    NzStatisticModule,
+    NzIconModule
   ]
 })
-export class LandingModule { }
+export class ProfileModule { }

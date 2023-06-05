@@ -1,2 +1,8 @@
 /* Important */
 @import 'styles/base/base';
+
+@supports (-webkit-appearance: none) {
+  :root {
+    font-size: 100%; /* Reset the font size for Safari */
+  }
+}

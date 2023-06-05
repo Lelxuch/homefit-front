@@ -10,7 +10,8 @@ const routes: Routes = [
   {path: '', component: BaseComponent,
     children: [
       {path: '', loadChildren: () => import('./sections/auth/auth.module').then(m => m.AuthModule)},
-      {path: 'history', loadChildren: () => import('./sections/history/history.module').then(m => m.HistoryModule)},
+      {path: 'history', loadChildren: () => import('./sections/history/history.module').then(m => m.HistoryModule), canActivate: [AuthGuard]},
+      {path: 'profile', loadChildren: () => import('./sections/profile/profile.module').then(m => m.ProfileModule), canActivate: [AuthGuard]},
     ],
   },
   {path: '**', component: NotFoundPageComponent}

@@ -1,6 +1,6 @@
 @import '../../../../../styles/base/variables';
 
-.login-outer {
+.signup-outer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,13 +8,13 @@
   margin-top: 150px;
 }
 
-.login-form {
+.signup-form {
   border-radius: $border-radius-1;
   padding: 30px;
   background: #fff;
   width: 400px;
 }
 
-.login-button {
+.signup-button {
   width: 100%;
 }

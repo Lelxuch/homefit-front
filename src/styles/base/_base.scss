@@ -49,3 +49,9 @@ a {
   max-width: 1400px;
   margin: 0 auto;
 }
+
+//@supports (-webkit-appearance: none) {
+//  :root {
+//    font-size: 120%; /* Reset the font size for Safari */
+//  }
+//}

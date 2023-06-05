@@ -1,19 +1,43 @@
-<div class="login-outer">
-    <form [formGroup]="loginForm" (submit)="login()" class="login-form" nz-form>
+<div class="signup-outer">
+    <form [formGroup]="signupForm" (submit)="signup()" class="signup-form" nz-form>
         <nz-form-item>
-            <nz-form-control nzErrorTip="Пожалуйста введите ваше имя пользователя">
+            <nz-form-control nzErrorTip="Please enter your email">
                 <nz-input-group nzPrefixIcon="user">
-                    <input formControlName="email" type="text" nz-input placeholder="Почта"/>
+                    <input formControlName="email" type="text" nz-input placeholder="Email"/>
                 </nz-input-group>
             </nz-form-control>
         </nz-form-item>
         <nz-form-item>
-            <nz-form-control nzErrorTip="Пожалуйста введите ваш пароль">
-                <nz-input-group nzPrefixIcon="lock">
-                    <input formControlName="password" type="password" nz-input placeholder="Пароль"/>
+            <nz-form-control nzErrorTip="Please enter your full name">
+                <nz-input-group nzPrefixIcon="user">
+                    <input formControlName="fullName" type="text" nz-input placeholder="Full Name"/>
                 </nz-input-group>
             </nz-form-control>
         </nz-form-item>
-        <button class="login-button" nz-button nzType="primary" type="submit">Submit</button>
+        <nz-form-item>
+            <nz-form-control nzErrorTip="Please select your gender">
+                <nz-input-group nzPrefixIcon="user">
+                    <nz-select formControlName="gender" nz-select nzPlaceHolder="Gender">
+                        <nz-option nzValue="Male" nzLabel="Male"></nz-option>
+                        <nz-option nzValue="Female" nzLabel="Female"></nz-option>
+                    </nz-select>
+                </nz-input-group>
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-control nzErrorTip="Please enter your age">
+                <nz-input-group nzPrefixIcon="user">
+                    <input formControlName="age" type="number" nz-input placeholder="Age"/>
+                </nz-input-group>
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-control nzErrorTip="Please enter your password">
+                <nz-input-group nzPrefixIcon="lock">
+                    <input formControlName="password" type="password" nz-input placeholder="Password"/>
+                </nz-input-group>
+            </nz-form-control>
+        </nz-form-item>
+        <button class="signup-button" nz-button nzType="primary" type="submit">Sign Up</button>
     </form>
 </div>

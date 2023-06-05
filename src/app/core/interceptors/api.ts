@@ -30,8 +30,6 @@ export class ApiInterceptor implements HttpInterceptor {
       });
     }
 
-    console.log(environment.apiUrl);
-
     return next.handle(request).pipe(
       catchError((error: HttpErrorResponse) => {
         // if (error.status === 401) {

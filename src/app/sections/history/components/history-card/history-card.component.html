@@ -1,10 +1,10 @@
-<div class="card" [routerLink]="data.id">
+<div class="card" [routerLink]="data.id.toString()">
     <div class="image-container">
         <img [src]="imgSrc" alt="Card Image">
         <div class="gradient-overlay"></div>
     </div>
     <div class="description">
         <h2>{{ data.name }}</h2>
-        <span class="date">{{ data.date }}</span>
+        <span class="date">{{ data.dateTime | date: "dd.MM.yyyy" }}</span>
     </div>
 </div>

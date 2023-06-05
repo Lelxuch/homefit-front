@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {IHistory} from "../../../../core/model/history";
 
 @Component({
   selector: 'app-history-card',
@@ -7,28 +8,28 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class HistoryCardComponent implements OnInit{
 
-  @Input() data: any;
+  @Input() data: IHistory;
   imgSrc: string | undefined = '';
 
   imgData = [
     {
-      type: "squats",
+      type: "Squats",
       src: "assets/images/history/squats.jpg"
     },
     {
-      type: "pushups",
+      type: "Pushups",
       src: "assets/images/history/pushups.jpg"
     },
     {
-      type: "abs-legs",
+      type: "Abs-legs",
       src: "assets/images/history/abs-legs.jpeg"
     },
     {
-      type: "lateral-raise",
+      type: "Lateral-raise",
       src: "assets/images/history/lateral-raise.jpg"
     },
     {
-      type: "curls",
+      type: "Curls",
       src: "assets/images/history/curls.jpg"
     }
   ]

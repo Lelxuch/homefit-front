@@ -10,7 +10,8 @@ import {NzFormModule} from 'ng-zorro-antd/form';
 import {NzButtonModule} from 'ng-zorro-antd/button';
 import {NzInputModule} from 'ng-zorro-antd/input';
 import {NzMessageModule} from 'ng-zorro-antd/message';
-import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
+import {NzInputNumberModule} from 'ng-zorro-antd/input-number';
+import {NzSelectModule} from 'ng-zorro-antd/select';
 
 import {LoginComponent} from './pages/login/login.component';
 import {SignupComponent} from './pages/signup/signup.component';
@@ -37,7 +38,8 @@ const routes: Routes = [
     NzButtonModule,
     NzInputModule,
     NzMessageModule,
-    NzInputNumberModule
+    NzInputNumberModule,
+    NzSelectModule
   ]
 })
 export class AuthModule {

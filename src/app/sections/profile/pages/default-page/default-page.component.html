@@ -1,0 +1,58 @@
+<div class="default-content">
+
+    <div class="history-title">
+        <h1 nz-typography>Profile</h1>
+    </div>
+
+    <nz-divider></nz-divider>
+
+    <div class="profile">
+        <div class="block personal-info">
+            <div class="personal-info-item">
+                <h4 nz-typography class="personal-info-title">Email</h4>
+                <span>{{ profileData.email }}</span>
+            </div>
+            <nz-divider></nz-divider>
+            <div class="personal-info-item">
+                <h4 nz-typography class="personal-info-title">Full name</h4>
+                <span>{{ profileData.fullName }}</span>
+            </div>
+            <nz-divider></nz-divider>
+            <div class="personal-info-item">
+                <h4 nz-typography class="personal-info-title">Age</h4>
+                <span>{{ profileData.age }}</span>
+            </div>
+            <nz-divider></nz-divider>
+            <div class="personal-info-item">
+                <h4 nz-typography class="personal-info-title">Gender</h4>
+                <span>{{ profileData.gender }}</span>
+            </div>
+        </div>
+        <div class="block statistic-item">
+            <div class="statistic-title">
+                Exercises
+            </div>
+            <div class="statistic-content">
+                <span nz-icon nzType="number" class="statistic-icon"></span>
+                <span class="statistic-text">
+                    {{ profileData.count }}
+                </span>
+            </div>
+        </div>
+        <div class="block statistic-item">
+            <div class="statistic-title">
+                Callories
+            </div>
+            <div class="statistic-content">
+                <span nz-icon nzType="fire" class="statistic-icon"></span>
+                <span class="statistic-text">
+                    {{ profileData.calories }}
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <app-loading *ngIf="loading" [type]="'fullscreen'"></app-loading>
+
+</div>
+
