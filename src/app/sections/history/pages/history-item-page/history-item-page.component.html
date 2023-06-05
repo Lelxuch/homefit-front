@@ -9,22 +9,48 @@
     </div>
 
     <div class="history-results">
-        <div class="block exercise-info">
+        <div class="block statistic-item">
+            <div class="statistic-title">
+                Exercise
+            </div>
+            <div class="statistic-content">
+                <div class="statistic-text">
+                    {{ historyItemData.exercise }}
+                </div>
+            </div>
         </div>
-        <div class="block">
-            2
+        <div class="block statistic-item">
+            <div class="statistic-title">
+                Count
+            </div>
+            <div class="statistic-content">
+                <span nz-icon nzType="number" class="statistic-icon"></span>
+                <span class="statistic-text">
+                    {{ historyItemData.count }}
+                </span>
+            </div>
         </div>
-        <div class="block">
-            3
+        <div class="block statistic-item">
+            <div class="statistic-title">
+                Accuracy
+            </div>
+            <div class="statistic-content">
+                <span nz-icon nzType="percentage" class="statistic-icon"></span>
+                <span class="statistic-text">
+                    {{ historyItemData.count }}
+                </span>
+            </div>
         </div>
-        <div class="block">
-            4
-        </div>
-        <div class="block">
-            5
-        </div>
-        <div class="block">
-            6
+        <div class="block statistic-item">
+            <div class="statistic-title">
+                Calories
+            </div>
+            <div class="statistic-content">
+                <span nz-icon nzType="fire" class="statistic-icon"></span>
+                <span class="statistic-text">
+                    {{ historyItemData.count }}
+                </span>
+            </div>
         </div>
     </div>
 </div>

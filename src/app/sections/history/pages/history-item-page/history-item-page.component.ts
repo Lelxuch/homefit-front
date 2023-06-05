@@ -39,6 +39,9 @@ export class HistoryItemPageComponent implements OnInit{
       this.loading = true;
       this.historyService.getHistoryItem(this.id).subscribe(res => {
         this.historyItemData = res;
+        this.historyItemData.count = 10;
+        this.historyItemData.accuracy = 70;
+        this.historyItemData.calories = 2;
 
         // Convert base64 string to a Blob
         const byteCharacters = atob(res.video);

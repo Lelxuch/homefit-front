@@ -6,6 +6,7 @@ import {NzTypographyModule} from "ng-zorro-antd/typography";
 import {NzDividerModule} from "ng-zorro-antd/divider";
 import {NzCardModule} from 'ng-zorro-antd/card';
 import {NzMessageModule} from "ng-zorro-antd/message";
+import {NzIconModule} from "ng-zorro-antd/icon";
 
 import {SharedModule} from "../../shared/shared.module";
 import {DefaultPageComponent} from './pages/default-page/default-page.component';
@@ -30,6 +31,7 @@ const routes: Routes = [
     NzDividerModule,
     NzCardModule,
     NzMessageModule,
+    NzIconModule,
     SharedModule
   ]
 })
