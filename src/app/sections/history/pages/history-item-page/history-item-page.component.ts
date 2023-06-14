@@ -34,14 +34,12 @@ export class HistoryItemPageComponent implements OnInit{
   ) { }
 
   ngOnInit() {
+    this.loading = true;
     this.activatedRoute$ = this.activatedRoute.params.subscribe(p => {
       this.id = p['id'];
-      this.loading = true;
       this.historyService.getHistoryItem(this.id).subscribe(res => {
         this.historyItemData = res;
-        this.historyItemData.count = 10;
-        this.historyItemData.accuracy = 70;
-        this.historyItemData.calories = 2;
+        console.log(this.historyItemData);
 
         // Convert base64 string to a Blob
         const byteCharacters = atob(res.video);
@@ -63,33 +61,5 @@ export class HistoryItemPageComponent implements OnInit{
       })
     });
   }
-
-  handleMetadata(event: Event, video: HTMLVideoElement) {
-    console.log('Metadata for video loaded', event, video);
-  }
-
-  handleError(event: Event, video: HTMLVideoElement) {
-    console.log('An error occurred', event, video);
-    if (video.error) {
-      switch (video.error.code) {
-        case video.error.MEDIA_ERR_ABORTED:
-          console.error('You aborted the video playback.');
-          break;
-        case video.error.MEDIA_ERR_NETWORK:
-          console.error('A network error caused the video download to fail.');
-          break;
-        case video.error.MEDIA_ERR_DECODE:
-          console.error('The video playback was aborted due to a corruption problem or because the video used features your browser did not support.');
-          break;
-        case video.error.MEDIA_ERR_SRC_NOT_SUPPORTED:
-          console.error('The video could not be loaded, either because the server or network failed or because the format is not supported.');
-          break;
-        default:
-          console.error('An unknown error occurred.');
-          break;
-      }
-    }
-  }
-
 
 }

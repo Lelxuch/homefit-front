@@ -12,6 +12,7 @@ import {SharedModule} from "../../shared/shared.module";
 import {DefaultPageComponent} from './pages/default-page/default-page.component';
 import {HistoryCardComponent} from './components/history-card/history-card.component';
 import {HistoryItemPageComponent} from './pages/history-item-page/history-item-page.component';
+import {NzSpinModule} from "ng-zorro-antd/spin";
 
 const routes: Routes = [
   {path: '', component: DefaultPageComponent},
@@ -32,7 +33,8 @@ const routes: Routes = [
     NzCardModule,
     NzMessageModule,
     NzIconModule,
-    SharedModule
+    SharedModule,
+    NzSpinModule
   ]
 })
 export class HistoryModule { }

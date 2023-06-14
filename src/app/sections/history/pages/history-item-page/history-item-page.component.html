@@ -1,9 +1,11 @@
 <div class="default-content history-item-outer">
 
+    <div *ngIf="loading" class="fullscreen blackout">
+        <nz-spin nzSimple nzSize="large"></nz-spin>
+    </div>
+
     <div class="video-block">
-        <video #videoPlayer [src]="videoSource" controls class="video"
-               (loadedmetadata)="handleMetadata($event, videoPlayer)"
-               (error)="handleError($event, videoPlayer)">
+        <video #videoPlayer [src]="videoSource" controls class="video">
             Your browser does not support HTML5 video.
         </video>
     </div>
@@ -14,8 +16,8 @@
                 Exercise
             </div>
             <div class="statistic-content">
-                <div class="statistic-text">
-                    {{ historyItemData.exercise }}
+                <div class="statistic-text exercise-name">
+                    {{ historyItemData?.exercise }}
                 </div>
             </div>
         </div>
@@ -26,18 +28,7 @@
             <div class="statistic-content">
                 <span nz-icon nzType="number" class="statistic-icon"></span>
                 <span class="statistic-text">
-                    {{ historyItemData.count }}
-                </span>
-            </div>
-        </div>
-        <div class="block statistic-item">
-            <div class="statistic-title">
-                Accuracy
-            </div>
-            <div class="statistic-content">
-                <span nz-icon nzType="percentage" class="statistic-icon"></span>
-                <span class="statistic-text">
-                    {{ historyItemData.count }}
+                    {{ historyItemData?.count }}
                 </span>
             </div>
         </div>
@@ -48,9 +39,52 @@
             <div class="statistic-content">
                 <span nz-icon nzType="fire" class="statistic-icon"></span>
                 <span class="statistic-text">
-                    {{ historyItemData.count }}
+                    {{ historyItemData?.calories }}
                 </span>
             </div>
         </div>
     </div>
+
+    <div class="errors-list">
+        <div class="block statistic-item">
+            <div class="statistic-title">
+                Accuracy
+            </div>
+            <div class="statistic-content">
+                <span nz-icon nzType="percentage" class="statistic-icon"></span>
+                <span class="statistic-text">
+                    {{ historyItemData?.accuracy }}
+                </span>
+            </div>
+        </div>
+        <div class="block error-item" *ngFor="let error of historyItemData?.errors">
+            <div class="error-content">
+                <div class="content-item">
+                    <span class="content-title">
+                        Field:
+                    </span>
+                    <span class="content-text">
+                        {{ error.field }}
+                    </span>
+                </div>
+                <div class="content-item">
+                    <span class="content-title">
+                        Count:
+                    </span>
+                    <span class="content-text">
+                        {{ error.count }}
+                    </span>
+                </div>
+                <div class="content-item">
+                    <span class="content-title">
+                        Message:
+                    </span>
+                    <span class="content-text">
+                        {{ error.message }}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>

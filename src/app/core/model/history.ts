@@ -13,4 +13,9 @@ export interface IHistoryItem {
   count: number;
   accuracy: number;
   calories: number;
+  errors: {
+    field: string;
+    message: string;
+    count: number;
+  }[]
 }

@@ -20,6 +20,7 @@ export class DefaultPageComponent implements OnInit{
   ) { }
 
   ngOnInit() {
+    this.loading = true;
     this.historyService.getHistoryList()
       .subscribe(res => {
         this.historyData = res;

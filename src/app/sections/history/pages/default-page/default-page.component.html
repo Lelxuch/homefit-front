@@ -1,5 +1,9 @@
 <div class="default-content">
 
+    <div *ngIf="loading" class="fullscreen">
+        <nz-spin nzSimple nzSize="large"></nz-spin>
+    </div>
+
     <div class="history-title">
         <h1 nz-typography>History</h1>
     </div>
@@ -16,7 +20,5 @@
         </ng-container>
 
     </div>
-
-    <app-loading *ngIf="loading" [type]="'fullscreen'"></app-loading>
 
 </div>

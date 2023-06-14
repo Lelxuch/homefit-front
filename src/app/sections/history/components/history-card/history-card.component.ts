@@ -14,7 +14,7 @@ export class HistoryCardComponent implements OnInit{
   // imgData = [
   //   {
   //     type: "Squats",
-  //     src: "assets/images/history/squats.jpg"
+  //     src: "assets/images/history/curls.jpg"
   //   },
   //   {
   //     type: "Pushups",
@@ -26,7 +26,7 @@ export class HistoryCardComponent implements OnInit{
   //   },
   //   {
   //     type: "Lateral-raise",
-  //     src: "assets/images/history/lateral-raise.jpg"
+  //     src: "assets/images/history/lateralRaise.jpg"
   //   },
   //   {
   //     type: "Curls",
